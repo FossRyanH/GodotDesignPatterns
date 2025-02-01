@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://g1pa33c1tj27"]
+
+[ext_resource type="Script" path="res://Scripts/Objects/ObstructionObject.cs" id="1_apu8i"]
+[ext_resource type="Texture2D" uid="uid://ca510i3whsnr8" path="res://Art/Environment/Pixel Crawler - Fairy Forest 1.7/Assets/Modern_Exteriors_Complete_Singles_16x16/ME_Singles_Garden_16x16_Statue_Putto_1.png" id="2_4c43a"]
+[ext_resource type="Texture2D" uid="uid://7imvdokhkoux" path="res://Art/Environment/Pixel Crawler - Fairy Forest 1.7/Assets/Modern_Exteriors_Complete_Singles_16x16/ME_Singles_Garden_16x16_Statue_Putto_3.png" id="2_fg7vx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w5ccs"]
+size = Vector2(16, 16)
+
+[node name="ObstructionObject" type="StaticBody2D" node_paths=PackedStringArray("_sprite")]
+texture_filter = 1
+script = ExtResource("1_apu8i")
+DmgSprite = ExtResource("2_fg7vx")
+UnDmgdSprite = ExtResource("2_4c43a")
+_sprite = NodePath("Sprite2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_w5ccs")

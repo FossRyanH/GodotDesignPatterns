@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5teos307uyb5"]
+
+[ext_resource type="PackedScene" uid="uid://g1pa33c1tj27" path="res://Scenes/Objects/rock_object.tscn" id="1_wodvx"]
+
+[node name="TestLevel" type="Node2D"]
+
+[node name="ObstructionObject" parent="." instance=ExtResource("1_wodvx")]
+position = Vector2(8, 5)
